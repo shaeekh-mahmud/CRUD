@@ -19,12 +19,12 @@ class StudentController extends Controller
       return view('students.create');
   }
 
-  public function store(Requet $request)
+  public function store(Request $request)
   {
       $request->validate([
           'studname'=>'required',
           'course'=>'required',
-          'fee '=>'required',
+          'fee'=>'required',
       ]);
       Student::create($request->all());
       return redirect()->route('students.index')
@@ -44,10 +44,12 @@ class StudentController extends Controller
   public function update(Request $request, Student $student)
   {
       $request->validate([
-
+        'studname'=>'required',
+        'course'=>'required',
+        'fee'=>'required',
       ]);
 
-      $student->update($request-all());
+      $student->update($request->all());
 
       return redirect()->route('students.index')
       ->with('success','Student updated successfully');
@@ -55,7 +57,7 @@ class StudentController extends Controller
   }
   public function destroy(Student $student)
   {
-      $stuent->delete();
+      $student->delete();
 
       return redirect()->route('students.index')
       ->with('success','Student delete successfully');

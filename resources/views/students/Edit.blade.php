@@ -1,4 +1,4 @@
-@extends('studnets.layout')
+@extends('students.layout')
 
 @section('content')
 
@@ -18,7 +18,7 @@
     <div class="alret alert-danger">
         <strong>Whoops!</Strong>There is some problems with your input.<br><br>
         <ul>
-            @foreach($errors->all()as $error)
+            @foreach($errors->all() as $error)
             <li>{{$error}}</li>
             @endforeach
         </ul>

@@ -17,7 +17,7 @@
     <div class="alert alert-danger">
         <strong>Whoops!</strong> There were some problems with your input.<br><br>
             <ul>
-                @foreach($errors->all()as $error)
+                @foreach($errors->all() as $error)
                 <li>{{$error}}</li>
                 @endforeach
             </ul>
@@ -43,7 +43,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <storng>Fee</strong>
-                    <input type="text" name="fee" class="form-control" placeholder="fee">
+                <input type="text" name="fee" class="form-control" placeholder="fee">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
